@@ -1,7 +1,7 @@
 general:
-  - build_dir: \src\test
- 
-  test:
- 
- - mkdir -p $CIRCLE_TEST_REPORTS/junit/
- - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/;
+  build_dir: \src\test
+
+test:
+ post:
+   - mkdir -p $CIRCLE_TEST_REPORTS/junit/;
+   - find . -type f -regex ".*/target/failsafe-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \; 
