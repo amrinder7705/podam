@@ -1,3 +1,7 @@
+machine:
+  ruby:
+    version: rbx-2.2.6
+
 general:
   build_dir: \src\test\java\uk\co\jemos\podam\test
   artifacts:
