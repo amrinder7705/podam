@@ -1,5 +1,10 @@
 general:
   build_dir: \src\test\java\uk\co\jemos\podam\test
+  
+general:
+   artifacts:
+     - $CIRCLE_TEST_REPORTS
+     - target  
 
 test:
  post:
